@@ -1,7 +1,7 @@
 config {
   type: "view",
   schema: "reporting",
-  tags: ["daily", "reporting"],
+  tags: ["Daily", "Reporting"],
   description: "Create a summary table for all users including statistics on questions, answeers and badges received.",
   columns: {
     user_id: `A unique identifier for a user`,
@@ -26,7 +26,12 @@ config {
 select
   stg_users.user_id,
   stg_users.age,
-  ${common.ageBucket("stg_users.age")} as age_bucket,
+  case
+    when cast(stg_users.age as int) between 0 and 18 then "Under 18"
+    when cast(stg_users.age as int) between 19 and 35 then "19 to 35"
+    when cast(stg_users.age as int) between 36 and 50 then "36 to 50"
+    else "50+"
+  end age_bucket,
   stg_users.creation_date,
   stg_users.user_tenure,
   count(distinct stg_badges.badge_id) as badge_count,

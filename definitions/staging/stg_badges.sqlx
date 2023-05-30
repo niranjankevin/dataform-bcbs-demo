@@ -1,6 +1,7 @@
 config {
   type: "view",
   schema: "staging",
+  tags: ["Staging"],
   description: "Cleaned version of stackoverflow.badges"
 }
 

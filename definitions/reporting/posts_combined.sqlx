@@ -1,7 +1,7 @@
 config {
-  type: "view",
+  type: "table",
   schema: "reporting",
-  tags: ["daily"],
+  tags: ["Daily", "Reporting"],
   description: "Combine both questions and answers into a single posts_all table",
   columns: {
     post_id: `A unique identifier for a post`,
@@ -11,6 +11,10 @@ config {
     body: `The content in the body of the post`
   },
 
+  
+  bigquery: {
+    partitionBy: "date(created_at)"
+  },
   assertions: {
     uniqueKey: ["post_id"],
     nonNull: ["post_id", "created_at"]
@@ -39,4 +43,3 @@ select
   parent_id
 from
   ${ref("stg_posts_questions")}
-
