@@ -1,7 +1,7 @@
 config {
   type: "view",
   schema: "staging",
-  tags: ["Staging"],
+  tags: ["Staging", "User Stats"],
   description: "Cleaned version of stackoverflow.users table"
 }
 
