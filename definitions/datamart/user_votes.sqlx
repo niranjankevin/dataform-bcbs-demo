@@ -1,0 +1,26 @@
+config {
+  type: "table",
+  schema: "datamart",
+  tags: ["Daily", "Datamart", "Votes"],
+  description: "Create a summary table for votes received by post.",
+  columns: {
+    vote_count: `The number of votes received for a post`,
+    post_id: `The identifier for the post`,
+    vote_type_id: `The identifier for the vote type`,
+    vote_type: `The descriptive name of the vote type`
+  }  
+}
+
+SELECT
+  count(*) as vote_count,
+  votes.post_id,
+  vote_type_id,
+  vote_types.vote_type
+FROM
+  ${ref("stg_votes")} votes
+    INNER JOIN ${ref("stg_vote_types")} vote_types
+    USING (vote_type_id)
+GROUP by
+  post_id,
+  vote_type_id,
+  vote_type

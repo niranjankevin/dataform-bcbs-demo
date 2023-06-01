@@ -1,0 +1,14 @@
+config {
+  type: "view",
+  schema: "staging",
+  tags: ["Staging"],
+  description: "Cleaned version of stackoverflow.votes table"
+}
+
+SELECT
+  id as vote_id,
+  creation_date,
+  post_id,
+  vote_type_id
+FROM
+  ${ref("votes")}

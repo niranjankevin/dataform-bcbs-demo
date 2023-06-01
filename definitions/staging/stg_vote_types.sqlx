@@ -1,0 +1,15 @@
+config {
+  type: "view",
+  schema: "staging",
+  tags: ["Staging", "Votes"],
+  description: "Cleaned version of raw.vote_types table",
+  assertions: {
+    uniqueKeys: [["vote_type_id"]]
+  }
+}
+
+SELECT
+  Id as vote_type_id,
+  Name as vote_type
+FROM
+  ${ref("vote_types")}
