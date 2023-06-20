@@ -1,7 +1,7 @@
 {
-    "defaultSchema": "dataform_stackoverflow",
-    "assertionSchema": "dataform_stackoverflow_assertions",
+    "defaultSchema": "dataform_bcbs",
+    "assertionSchema": "dataform_bcbs_assertions",
     "warehouse": "bigquery",
-    "defaultDatabase": "monty-dataform-demo",
+    "defaultDatabase": "gcp-hcls-demo",
     "defaultLocation": "US"
 }
