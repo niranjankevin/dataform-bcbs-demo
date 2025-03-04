@@ -1,6 +1,6 @@
 config {
   type: "declaration",
-  database: "gcp-hcls-demo",
+  database: "gcptraining-350417",
   schema: "raw",
   name: "vote_types"
 }
