@@ -2,6 +2,6 @@
     "defaultSchema": "dataform_bcbs",
     "assertionSchema": "dataform_bcbs_assertions",
     "warehouse": "bigquery",
-    "defaultDatabase": "gcp-hcls-demo",
+    "defaultDatabase": "gcptraining-350417",
     "defaultLocation": "US"
 }
