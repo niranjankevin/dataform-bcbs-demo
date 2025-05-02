@@ -1,0 +1,7 @@
+defaultProject: preston-307021
+defaultLocation: us-east1
+defaultDataset: dataform_extreme_weather_programming_example
+defaultAssertionDataset: dataform_extreme_weather_programming_example_assertions
+defaultNotebookRuntimeOptions:
+  outputBucket: gs://east_bucket_preston
+  runtimeTemplateName: projects/preston-307021/locations/us-east1/notebookRuntimeTemplates/Default
