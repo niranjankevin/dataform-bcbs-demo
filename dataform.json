@@ -2,6 +2,6 @@
     "defaultSchema": "dataform_bcbs",
     "assertionSchema": "dataform_bcbs_assertions",
     "warehouse": "bigquery",
-    "defaultDatabase": "gcptraining-350417",
+    "defaultDatabase": "preston-307021",
     "defaultLocation": "US"
 }
