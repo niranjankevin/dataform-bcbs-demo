@@ -1,6 +1,6 @@
 config {
   type: "declaration",
-  database: "gcptraining-350417",
+  database: "preston-307021",
   schema: "raw",
   name: "vote_types"
 }
